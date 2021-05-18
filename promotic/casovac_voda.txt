@@ -1,0 +1,66 @@
+Dim mbat
+Set mbat=pMe.Pm("../mbat")
+Dim modt
+Set modt=pMe.Pm("../modt")
+Dim mstu
+Set mstu=pMe.Pm("../mstu")
+Dim mtep
+Set mtep=pMe.Pm("../mtep")
+Dim mzas
+Set mzas=pMe.Pm("../mzas")
+Dim tbat
+Set tbat=pMe.Pm("../tbat")
+Dim tstu
+Set tstu=pMe.Pm("../tstu")
+Dim ttep
+Set ttep=pMe.Pm("../ttep")
+Dim tzas
+Set tzas=pMe.Pm("../tzas")
+
+mbat.value = mstu.value+mtep.value
+mzas.value = mzas.value+mstu.value+mtep.value-modt.value
+
+
+If mzas > 1000 Then
+mzas.value = 1000
+Else mzas.value=mzas.value
+End If
+
+If mzas < 0 Then
+mzas.value = 0
+Else mzas.value = mzas.value
+End If
+
+If tzas > 60 Then
+tzas.value = 60
+End If
+
+
+If mzas > 500 Then
+modt.value = 40
+End If
+
+If mzas > 750 Then
+modt.value = 65
+End If
+
+If mzas > 850 Then
+modt.value = 80
+End If
+
+If mzas <= 50 Then
+modt.value = 0
+End If
+
+If tzas >= 45 Then
+mtep.value = 10
+mstu.value = 75
+End If
+
+If tzas <= 23 Then 
+mstu.value = 10
+mtep.value = 75
+End If
+
+tbat.value=((mstu.value*tstu.value)+(mtep.value*ttep.value))/(mstu.value + mtep.value)
+tzas.value=((mzas.value*tzas.value)+(mbat.value*tbat.value))/(mzas.value + mbat.value)

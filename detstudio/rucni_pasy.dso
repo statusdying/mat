@@ -1,0 +1,2898 @@
+<?xml version="1.0"?>
+<!-- DetStudio project descriptor -->
+<DetStation scheme="0">
+  <guid>4340c0cd-bf4b-485e-8b77-1e894e466bcb</guid>
+  <!--AMiNi2D-->
+  <DSversion>1.8.3.36</DSversion>
+  <StationDescriptor>
+    <Version>1.0.0</Version>
+    <Copyright>(c) 2008, AMiT, spol. s r.o.</Copyright>
+    <Comment>
+    </Comment>
+    <Author>root</Author>
+    <TridetLink>C:\DOCUME~1\root\LOCALS~1\Temp\GEN\test.lib</TridetLink>
+    <AdresaStanice>4</AdresaStanice>
+    <VersionAutoIncrement>False</VersionAutoIncrement>
+    <PostBuild>
+    </PostBuild>
+    <Sapp>False</Sapp>
+    <EepromClear>False</EepromClear>
+    <UseAFSFS>False</UseAFSFS>
+    <Notes><![CDATA[]]></Notes>
+  </StationDescriptor>
+  <ExternalStationManager>
+    <Stations />
+  </ExternalStationManager>
+  <Languages Actual="cs-CZ">
+    <Language ci="cs-CZ" />
+  </Languages>
+  <UserGroups>
+    <UserGroup Name="eService" />
+    <UserGroup Name="eTechnologist" />
+    <UserGroup Name="eProgrammer" />
+  </UserGroups>
+  <Users>
+    <User Name="Neznámý" Group="eService" Password="1234" />
+  </Users>
+  <Project Class="Amit.Psp4.UI.Psp4Ide">
+    <Data Class="Amit.Psp4.Shared.Psp4Project">
+      <LastRevised>-8588983092552432058</LastRevised>
+      <CodeBlockList>
+        <CodeBlock Name="Proc00" Class="Amit.Psp4.Shared.CodeProcess">
+          <Comment>Hlavní proces</Comment>
+          <Body Class="Amit.Psp4.Shared.CodeBodyPse">
+            <Script><![CDATA[
+	DigIn #0, DI0, 0x0000
+	DigOut DO0, #0, 0x0000]]></Script>
+          </Body>
+          <Period>100</Period>
+          <Offset>0</Offset>
+          <Type>0</Type>
+          <InterruptEdge>1</InterruptEdge>
+        </CodeBlock>
+        <CodeBlock Name="Proc01" Class="Amit.Psp4.Shared.CodeProcess">
+          <Comment>
+          </Comment>
+          <Body Class="Amit.Psp4.RS.CodeBodyRS">
+            <GrElementList>
+              <GrElement Class="Amit.Psp4.RS.GrModuleFB">
+                <Key>A0</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>7</TilePos.Y>
+                <TilePos.Width>4</TilePos.Width>
+                <TilePos.Height>4</TilePos.Height>
+                <ModuleTypeName>RS_LA</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A1</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>7</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@zapP3</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A10</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>12</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas3</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A11</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>20</TilePos.X>
+                <TilePos.Y>17</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>ST</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas1</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A12</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>7</TilePos.X>
+                <TilePos.Y>12</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@zapP2</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleFB">
+                <Key>A13</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>23</TilePos.Y>
+                <TilePos.Width>4</TilePos.Width>
+                <TilePos.Height>4</TilePos.Height>
+                <ModuleTypeName>RS_LA</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A14</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>23</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@NT</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A15</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>15</TilePos.X>
+                <TilePos.Y>23</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>ST</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vystNT</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A16</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>25</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vypNT</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A18</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>5</TilePos.X>
+                <TilePos.Y>17</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@zapP1</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A2</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>17</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas3</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A21</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>2</TilePos.X>
+                <TilePos.Y>10</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vystNT</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A25</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>2</TilePos.X>
+                <TilePos.Y>20</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vystNT</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A3</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>9</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vypP3</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A32</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>2</TilePos.X>
+                <TilePos.Y>15</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vystNT</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A36</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>14</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vypP2</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A37</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>2</TilePos.X>
+                <TilePos.Y>5</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vystNT</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A4</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>7</TilePos.X>
+                <TilePos.Y>17</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas2</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A45</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>7</TilePos.X>
+                <TilePos.Y>14</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LDN</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas1</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A47</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>7</TilePos.X>
+                <TilePos.Y>9</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LDN</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas2</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A49</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>5</TilePos.X>
+                <TilePos.Y>9</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LDN</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas1</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A5</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>20</TilePos.X>
+                <TilePos.Y>7</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>ST</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas3</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleFB">
+                <Key>A50</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>1</TilePos.Y>
+                <TilePos.Width>4</TilePos.Width>
+                <TilePos.Height>4</TilePos.Height>
+                <ModuleTypeName>RS_LA</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A51</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>1</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas3</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A53</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>7</TilePos.X>
+                <TilePos.Y>1</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas2</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A55</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>5</TilePos.X>
+                <TilePos.Y>1</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas1</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A57</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>3</TilePos.X>
+                <TilePos.Y>1</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@ZapN</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A59</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>3</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@VypN</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A6</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>19</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>LD</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@vypP1</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A61</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>15</TilePos.X>
+                <TilePos.Y>1</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>ST</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@ChodN</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleFB">
+                <Key>A7</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>12</TilePos.Y>
+                <TilePos.Width>4</TilePos.Width>
+                <TilePos.Height>4</TilePos.Height>
+                <ModuleTypeName>RS_LA</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleContact">
+                <Key>A8</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>20</TilePos.X>
+                <TilePos.Y>12</TilePos.Y>
+                <TilePos.Width>2</TilePos.Width>
+                <TilePos.Height>2</TilePos.Height>
+                <ModuleTypeName>ST</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                  <Value>@Pas2</Value>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrModuleFB">
+                <Key>A9</Key>
+                <KeyBase>A</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>17</TilePos.Y>
+                <TilePos.Width>4</TilePos.Width>
+                <TilePos.Height>4</TilePos.Height>
+                <ModuleTypeName>RS_LA</ModuleTypeName>
+                <Comment>
+                </Comment>
+                <Params>
+                </Params>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.PinConnector">
+                <Key>C1</Key>
+                <KeyBase>C</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>4</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.PinConnector">
+                <Key>C23</Key>
+                <KeyBase>C</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>10</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.PinConnector">
+                <Key>C30</Key>
+                <KeyBase>C</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>20</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.PinConnector">
+                <Key>C42</Key>
+                <KeyBase>C</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>15</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D0</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>4</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>4</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>4</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A59.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>C1</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D11</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>13</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>13</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>13</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A10.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A7.S.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D12</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>18</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>18</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>18</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A2.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A9.S.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D13</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>13</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>9</X>
+                    <Y>13</Y>
+                  </Point>
+                  <Point>
+                    <X>9</X>
+                    <Y>13</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A12.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A10.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D14</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>18</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>9</X>
+                    <Y>18</Y>
+                  </Point>
+                  <Point>
+                    <X>9</X>
+                    <Y>18</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A4.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A2.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D15</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>24</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>24</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>24</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A14.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A13.S.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D16</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>20</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>20</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>20</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A6.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>C30</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D17</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>15</TilePos.X>
+                <TilePos.Y>18</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>15</X>
+                    <Y>18</Y>
+                  </Point>
+                  <Point>
+                    <X>20</X>
+                    <Y>18</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A9.Q1.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A11.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D18</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>26</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>26</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>26</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A16.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A13.R1.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D19</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>7</TilePos.X>
+                <TilePos.Y>18</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>7</X>
+                    <Y>18</Y>
+                  </Point>
+                  <Point>
+                    <X>7</X>
+                    <Y>18</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A18.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A4.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D2</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>8</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>8</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>8</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A1.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A0.S.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D20</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>15</TilePos.X>
+                <TilePos.Y>24</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>15</X>
+                    <Y>24</Y>
+                  </Point>
+                  <Point>
+                    <X>15</X>
+                    <Y>24</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A15.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A13.Q1.out</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D22</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>4</TilePos.X>
+                <TilePos.Y>11</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>4</X>
+                    <Y>11</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>11</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>10</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A21.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>C23</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D24</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>10</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>10</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>10</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>C23</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A0.R1.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D29</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>4</TilePos.X>
+                <TilePos.Y>21</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>4</X>
+                    <Y>21</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>21</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>20</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A25.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>C30</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D3</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>4</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>4</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>4</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>C1</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A50.R1.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D30</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>10</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>10</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>10</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A3.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>C23</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D31</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>20</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>20</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>20</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>C30</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A9.R1.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D33</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>4</TilePos.X>
+                <TilePos.Y>16</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>4</X>
+                    <Y>16</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>16</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>15</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A32.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>C42</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D38</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>4</TilePos.X>
+                <TilePos.Y>6</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>4</X>
+                    <Y>6</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>6</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>4</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A37.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>C1</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D41</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>15</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>15</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>15</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A36.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>C42</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D43</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>15</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>15</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>15</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>C42</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A7.R1.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D46</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>15</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>9</X>
+                    <Y>15</Y>
+                  </Point>
+                  <Point>
+                    <X>9</X>
+                    <Y>15</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A45.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A36.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D48</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>10</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>9</X>
+                    <Y>10</Y>
+                  </Point>
+                  <Point>
+                    <X>9</X>
+                    <Y>10</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A47.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A3.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D50</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>7</TilePos.X>
+                <TilePos.Y>10</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>7</X>
+                    <Y>10</Y>
+                  </Point>
+                  <Point>
+                    <X>7</X>
+                    <Y>10</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A49.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A47.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D52</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>11</TilePos.X>
+                <TilePos.Y>2</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>11</X>
+                    <Y>2</Y>
+                  </Point>
+                  <Point>
+                    <X>11</X>
+                    <Y>2</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A51.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A50.S.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D54</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>9</TilePos.X>
+                <TilePos.Y>2</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>9</X>
+                    <Y>2</Y>
+                  </Point>
+                  <Point>
+                    <X>9</X>
+                    <Y>2</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A53.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A51.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D56</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>7</TilePos.X>
+                <TilePos.Y>2</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>7</X>
+                    <Y>2</Y>
+                  </Point>
+                  <Point>
+                    <X>7</X>
+                    <Y>2</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A55.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A53.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D58</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>5</TilePos.X>
+                <TilePos.Y>2</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>5</X>
+                    <Y>2</Y>
+                  </Point>
+                  <Point>
+                    <X>5</X>
+                    <Y>2</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A57.OUT.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A55.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D6</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>15</TilePos.X>
+                <TilePos.Y>8</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>15</X>
+                    <Y>8</Y>
+                  </Point>
+                  <Point>
+                    <X>20</X>
+                    <Y>8</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A0.Q1.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A5.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D62</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>15</TilePos.X>
+                <TilePos.Y>2</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>15</X>
+                    <Y>2</Y>
+                  </Point>
+                  <Point>
+                    <X>15</X>
+                    <Y>2</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A61.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A50.Q1.out</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.MultiLine">
+                <Key>D9</Key>
+                <KeyBase>D</KeyBase>
+                <TilePos.X>15</TilePos.X>
+                <TilePos.Y>13</TilePos.Y>
+                <TilePos.Width>0</TilePos.Width>
+                <TilePos.Height>0</TilePos.Height>
+                <PointList>
+                  <Point>
+                    <X>15</X>
+                    <Y>13</Y>
+                  </Point>
+                  <Point>
+                    <X>20</X>
+                    <Y>13</Y>
+                  </Point>
+                </PointList>
+                <Pin1>
+                  <PinLine>
+                    <PeerDesc>A7.Q1.out</PeerDesc>
+                  </PinLine>
+                </Pin1>
+                <Pin2>
+                  <PinLine>
+                    <PeerDesc>A8.IN.in</PeerDesc>
+                  </PinLine>
+                </Pin2>
+              </GrElement>
+              <GrElement Class="Amit.Psp4.RS.GrTextNote">
+                <Key>F0</Key>
+                <KeyBase>F</KeyBase>
+                <TilePos.X>2</TilePos.X>
+                <TilePos.Y>28</TilePos.Y>
+                <TilePos.Width>13</TilePos.Width>
+                <TilePos.Height>11</TilePos.Height>
+                <Text>Když zapneš pás 3 sepne se ZapP3 --&gt; můžeš zapnout P2 .....
+
+když vypneš Pas1 tak zmízí negace na pásu 2 (Pas1 ='0') a můžeš vypnout pás 2 pomocí vypP2</Text>
+              </GrElement>
+            </GrElementList>
+          </Body>
+          <Period>100</Period>
+          <Offset>0</Offset>
+          <Type>1</Type>
+          <InterruptEdge>1</InterruptEdge>
+        </CodeBlock>
+        <CodeBlock Name="ProcIDLE" Class="Amit.Psp4.Shared.CodeProcess">
+          <Comment>Obsluha obrazovek</Comment>
+          <Body Class="Amit.Psp4.Shared.CodeBodyPse">
+            <Script><![CDATA[ Lcw3Idle NONE]]></Script>
+          </Body>
+          <Period>1000</Period>
+          <Offset>0</Offset>
+          <Type>16</Type>
+          <InterruptEdge>1</InterruptEdge>
+        </CodeBlock>
+      </CodeBlockList>
+      <CodeFBList />
+      <DBase>
+        <VariableList>
+          <Variable Name="DI0" Class="Amit.Psp4.Shared.Psp4VariableBase">
+            <Wid>4000</Wid>
+            <Station>4</Station>
+            <Type>dbtInt</Type>
+            <Comment>
+            </Comment>
+            <WarmInit>False</WarmInit>
+            <InitialValueFormat>0</InitialValueFormat>
+          </Variable>
+          <Variable Name="DO0" Class="Amit.Psp4.Shared.Psp4VariableBase">
+            <Wid>4001</Wid>
+            <Station>4</Station>
+            <Type>dbtInt</Type>
+            <Comment>
+            </Comment>
+            <WarmInit>False</WarmInit>
+            <InitialValueFormat>0</InitialValueFormat>
+          </Variable>
+          <Variable Name="~AuxB" Class="Amit.Psp4.Shared.Psp4VariableBase">
+            <Wid>65500</Wid>
+            <Station>4</Station>
+            <Type>dbtIntMtx</Type>
+            <Comment>LA system</Comment>
+            <WarmInit>False</WarmInit>
+            <InitialValueFormat>0</InitialValueFormat>
+            <Row>1</Row>
+            <Col>1</Col>
+          </Variable>
+          <Variable Name="~AuxI" Class="Amit.Psp4.Shared.Psp4VariableBase">
+            <Wid>65501</Wid>
+            <Station>4</Station>
+            <Type>dbtIntMtx</Type>
+            <Comment>LA system</Comment>
+            <WarmInit>False</WarmInit>
+            <InitialValueFormat>0</InitialValueFormat>
+            <Row>1</Row>
+            <Col>1</Col>
+          </Variable>
+          <Variable Name="~AuxL" Class="Amit.Psp4.Shared.Psp4VariableBase">
+            <Wid>65502</Wid>
+            <Station>4</Station>
+            <Type>dbtLongMtx</Type>
+            <Comment>LA system</Comment>
+            <WarmInit>False</WarmInit>
+            <InitialValueFormat>0</InitialValueFormat>
+            <Row>1</Row>
+            <Col>1</Col>
+          </Variable>
+          <Variable Name="~AuxF" Class="Amit.Psp4.Shared.Psp4VariableBase">
+            <Wid>65503</Wid>
+            <Station>4</Station>
+            <Type>dbtFloatMtx</Type>
+            <Comment>LA system</Comment>
+            <WarmInit>False</WarmInit>
+            <InitialValueFormat>0</InitialValueFormat>
+            <Row>1</Row>
+            <Col>1</Col>
+          </Variable>
+        </VariableList>
+        <AliasList>
+          <Alias Name="@zapP3" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Zapnutí pásu 3</Comment>
+            <VarName>DI0</VarName>
+            <Bit>0</Bit>
+          </Alias>
+          <Alias Name="@vypP3" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Vypnutí pásu 3</Comment>
+            <VarName>DI0</VarName>
+            <Bit>3</Bit>
+          </Alias>
+          <Alias Name="@Pas3" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Výstup pásu 3</Comment>
+            <VarName>DO0</VarName>
+            <Bit>2</Bit>
+          </Alias>
+          <Alias Name="@Pas2" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Výstup pásu 2</Comment>
+            <VarName>DO0</VarName>
+            <Bit>1</Bit>
+          </Alias>
+          <Alias Name="@zapP2" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Zapnutí pásu 2</Comment>
+            <VarName>DI0</VarName>
+            <Bit>1</Bit>
+          </Alias>
+          <Alias Name="@vypP2" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Vypnutí pásu 2</Comment>
+            <VarName>DI0</VarName>
+            <Bit>4</Bit>
+          </Alias>
+          <Alias Name="@zapP1" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Zapnutí pásu 1</Comment>
+            <VarName>DI0</VarName>
+            <Bit>2</Bit>
+          </Alias>
+          <Alias Name="@Pas1" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Výstup pásu 1</Comment>
+            <VarName>DO0</VarName>
+            <Bit>0</Bit>
+          </Alias>
+          <Alias Name="@vypP1" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Vypnutí pásu 1</Comment>
+            <VarName>DI0</VarName>
+            <Bit>5</Bit>
+          </Alias>
+          <Alias Name="@ZapN" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Zapnutí Násypky</Comment>
+            <VarName>DI0</VarName>
+            <Bit>8</Bit>
+          </Alias>
+          <Alias Name="@VypN" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Vypnutí Násypky</Comment>
+            <VarName>DI0</VarName>
+            <Bit>9</Bit>
+          </Alias>
+          <Alias Name="@ChodN" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Výstup Násypky</Comment>
+            <VarName>DO0</VarName>
+            <Bit>3</Bit>
+          </Alias>
+          <Alias Name="@NT" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Nouzové Tlačítko</Comment>
+            <VarName>DI0</VarName>
+            <Bit>6</Bit>
+          </Alias>
+          <Alias Name="@vypNT" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Vypnutí Nouzového Tlačítka</Comment>
+            <VarName>DI0</VarName>
+            <Bit>7</Bit>
+          </Alias>
+          <Alias Name="@vystNT" Class="Amit.Psp4.Shared.Psp4Alias">
+            <Comment>Výstup Nouzového Tlačítka</Comment>
+            <VarName>DO0</VarName>
+            <Bit>4</Bit>
+          </Alias>
+        </AliasList>
+      </DBase>
+      <DteData>
+        <EndOfLineCR>False</EndOfLineCR>
+        <EndOfLineLF>False</EndOfLineLF>
+        <Increment>10</Increment>
+        <Formaty>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>0</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="OK" />
+            <Text Lang="cs-CZ" Text="Žádná chyba" />
+            <Comment>OK</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>16</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Zavedení operačního systému" />
+            <Comment>Zavedení operačního systému</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>17</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Studeny start síťového zavaděče" />
+            <Comment>Studeny start síťového zavaděče</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>18</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Teplý start síťového zavaděče (výpadek: %T)" />
+            <Comment>Teplý start síťového zavaděče</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>19</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Studený start aplikace" />
+            <Comment>Studený start aplikace</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>20</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Teplý start aplikace (výpadek: %T)" />
+            <Comment>Teplý start aplikace</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>21</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Chyba procesoru: %0sw" />
+            <Comment>Chyba procesoru</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>22</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Zápis do zakázané paměti" />
+            <Comment>Zápis do zakázané paměti</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>23</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Interní chyba řadiče přerušení, adr.: %d" />
+            <Comment>Interní chyba řadiče přerušení</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>24</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="eth" />
+            <Text Lang="cs-CZ" Text="Rozhraní č. %0w (karta %gh typ %sl" />
+            <Comment>Stav rozhraní Ethernet</Comment>
+            <DWTabulka>EthState</DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="Db" />
+            <Text Lang="cs-CZ" Text="WID %0i neexistuje." />
+            <Comment>Neplatný WID proměnné</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>33</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="Db" />
+            <Text Lang="cs-CZ" Text="Neplatný handle proměnné %0w" />
+            <Comment>Neplatný vnitřní identifikátor proměnné</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>34</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="Db" />
+            <Text Lang="cs-CZ" Text="Neplatný typ %1sw proměnné %0i" />
+            <Comment>Neplatný typ proměnné</Comment>
+            <DWTabulka>Typy</DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>35</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="Db" />
+            <Text Lang="cs-CZ" Text="Neplatný řádek %1w proměnné %0w" />
+            <Comment>Neplatný řádek proměnné</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>36</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="Db" />
+            <Text Lang="cs-CZ" Text="Neplatný sloupec %1w proměnné %0w" />
+            <Comment>Neplatný sloupec proměnné</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>37</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="Db" />
+            <Text Lang="cs-CZ" Text="Neplatný počet řádků %1w proměnné %0w" />
+            <Comment>Neplatný počet řádků proměnné</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>38</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="Db" />
+            <Text Lang="cs-CZ" Text="Neplatný počet sloupců %1w proměnné %0w" />
+            <Comment>Neplatný počet sloupců proměnné</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>39</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="nos" />
+            <Text Lang="cs-CZ" Text="Nedostatek paměti" />
+            <Comment>Nedostatek paměti</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>40</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="aeg" />
+            <Text Lang="cs-CZ" Text="Špatný 1/4h pulz, délka: %t" />
+            <Comment>Špatný 1/4h pulz při měření odběru el.energie</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32772</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="val" />
+            <Text Lang="cs-CZ" Text="U ventilu %0w - %1w jsou oba dva KS sepnuty" />
+            <Comment>U ventilu jsou oba koncové spínače sepnuté</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32773</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="val" />
+            <Text Lang="cs-CZ" Text="U ventilu %0w - %1w jsou oba dva KS v pořádku" />
+            <Comment>U ventilu jsou oba koncové spínače v pořádku</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32774</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="val" />
+            <Text Lang="cs-CZ" Text="Ventil %0w - %1w nedojel na KS OTEVRENO" />
+            <Comment>Ventil nedojel v časovém limitu na koncový spínač OTEVŘENO</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32775</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="val" />
+            <Text Lang="cs-CZ" Text="Ventil %0w - %1w nedojel na KS ZAVRENO" />
+            <Comment>Ventil nedojel v časovém limitu na koncový spínač OTEVŘENO</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32776</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="val" />
+            <Text Lang="cs-CZ" Text="Ventil %0w - %1w dojel na KS OTEVRENO" />
+            <Comment>Ventil dojel na koncový spínač OTEVŘENO</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32777</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="val" />
+            <Text Lang="cs-CZ" Text="Ventil %0w - %1w dojel na KS ZAVRENO" />
+            <Comment>Ventil dojel na koncový spínač ZAVŘENO</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32800</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="lcd" />
+            <Text Lang="cs-CZ" Text="Nelze vložit čtecí požadavek do buferu %sl" />
+            <Comment>Nelze vložit čtecí požadavek</Comment>
+            <DWTabulka>Bufer</DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32801</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="lcd" />
+            <Text Lang="cs-CZ" Text="Nelze vložit zápisový požadavek do buferu %sl" />
+            <Comment>Nelze vložit zápisový požadavek</Comment>
+            <DWTabulka>Bufer</DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32802</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="lcd" />
+            <Text Lang="cs-CZ" Text="Přihlášení uživatele %0w" />
+            <Comment>Přihlášení uživatele</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+          <Format Class="Amit.DetStudio.Shared.DteItem">
+            <Kod>32803</Kod>
+            <System>True</System>
+            <Prefix Lang="cs-CZ" Text="lcd" />
+            <Text Lang="cs-CZ" Text="Odhlašení uživatele %0w" />
+            <Comment>Odhlášení uživatele</Comment>
+            <DWTabulka>
+            </DWTabulka>
+            <FTabulka>
+            </FTabulka>
+          </Format>
+        </Formaty>
+        <Tabulky>
+          <Tabulka Class="Amit.DetStudio.Shared.DteTable">
+            <Nazev>Bufer</Nazev>
+            <Comment>Buffer (Systémová tabulka)</Comment>
+            <Typ>Long</Typ>
+            <Polozky>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>0</Dolni>
+                <Horni>0</Horni>
+                <Text Lang="cs-CZ" Text="NOSu" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>65536</Dolni>
+                <Horni>65536</Horni>
+                <Text Lang="cs-CZ" Text="LCDSHELLu" />
+              </Polozka>
+            </Polozky>
+          </Tabulka>
+          <Tabulka Class="Amit.DetStudio.Shared.DteTable">
+            <Nazev>EthState</Nazev>
+            <Comment>Stav rozhraní Ethernet (sytémová tabulka)</Comment>
+            <Typ>Long</Typ>
+            <Polozky>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>131072</Dolni>
+                <Horni>131072</Horni>
+                <Text Lang="cs-CZ" Text="AD-ETH100) stav 10Mb/s, poloduplex" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>131073</Dolni>
+                <Horni>131073</Horni>
+                <Text Lang="cs-CZ" Text="AD-ETH100) stav 10Mb/s, plnýduplex" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>131076</Dolni>
+                <Horni>131076</Horni>
+                <Text Lang="cs-CZ" Text="AD-ETH100) stav 100Mb/s, poloduplex" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>131077</Dolni>
+                <Horni>131077</Horni>
+                <Text Lang="cs-CZ" Text="AD-ETH100) stav 100Mb/s, plný duplex" />
+              </Polozka>
+            </Polozky>
+          </Tabulka>
+          <Tabulka Class="Amit.DetStudio.Shared.DteTable">
+            <Nazev>Procesor</Nazev>
+            <Comment>Chyby procesoru (sytémová tabulka)</Comment>
+            <Typ>Long</Typ>
+            <Polozky>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>0</Dolni>
+                <Horni>0</Horni>
+                <Text Lang="cs-CZ" Text="Přetečení uživ./CP zásobníku" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>1</Dolni>
+                <Horni>1</Horni>
+                <Text Lang="cs-CZ" Text="Nedefinovaný kód instrukce" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>2</Dolni>
+                <Horni>2</Horni>
+                <Text Lang="cs-CZ" Text="Zakázaná instrukce" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>3</Dolni>
+                <Horni>3</Horni>
+                <Text Lang="cs-CZ" Text="Špatný typ operandu instrukce" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>4</Dolni>
+                <Horni>4</Horni>
+                <Text Lang="cs-CZ" Text="Špatná adresa dat" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>5</Dolni>
+                <Horni>5</Horni>
+                <Text Lang="cs-CZ" Text="Špatný přístup na sběrnici procesoru" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>6</Dolni>
+                <Horni>6</Horni>
+                <Text Lang="cs-CZ" Text="Přetečení zásobníku procesoru" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>7</Dolni>
+                <Horni>7</Horni>
+                <Text Lang="cs-CZ" Text="Podtečení zásobníku procesoru" />
+              </Polozka>
+            </Polozky>
+          </Tabulka>
+          <Tabulka Class="Amit.DetStudio.Shared.DteTable">
+            <Nazev>Typy</Nazev>
+            <Comment>Databázové typy (sytémová tabulka)</Comment>
+            <Typ>Long</Typ>
+            <Polozky>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>0</Dolni>
+                <Horni>0</Horni>
+                <Text Lang="cs-CZ" Text="DBT_INT" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>1</Dolni>
+                <Horni>1</Horni>
+                <Text Lang="cs-CZ" Text="DBT_LONG" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>2</Dolni>
+                <Horni>2</Horni>
+                <Text Lang="cs-CZ" Text="DBT_FLOAT" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>3</Dolni>
+                <Horni>3</Horni>
+                <Text Lang="cs-CZ" Text="DBT_INTMTX" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>4</Dolni>
+                <Horni>4</Horni>
+                <Text Lang="cs-CZ" Text="DBT_LONGMTX" />
+              </Polozka>
+              <Polozka Class="Amit.DetStudio.Shared.DteTable+DteTableItemFloat">
+                <Dolni>5</Dolni>
+                <Horni>5</Horni>
+                <Text Lang="cs-CZ" Text="DBT_FLOATMTX" />
+              </Polozka>
+            </Polozky>
+          </Tabulka>
+        </Tabulky>
+      </DteData>
+      <ArionManager>
+        <Arion>
+          <ArionLine>
+            <Name>Arion0</Name>
+            <Port>0</Port>
+            <Baud>19200</Baud>
+            <ID>0</ID>
+            <InitPeriodAIAO>2000</InitPeriodAIAO>
+            <InitPeriodDIDO>2000</InitPeriodDIDO>
+            <InitGuardTime>2000</InitGuardTime>
+            <TimeBroadcast>False</TimeBroadcast>
+            <ArionModuleList />
+          </ArionLine>
+        </Arion>
+      </ArionManager>
+      <TelemetrManager>
+        <Telemetr />
+      </TelemetrManager>
+      <ModbusManager>
+        <Psp4Modbus />
+      </ModbusManager>
+      <ModbusMasterManager />
+      <HwDescriptor>
+        <IsModular>False</IsModular>
+        <WidMapping>False</WidMapping>
+        <BlockReadNetDbNames>False</BlockReadNetDbNames>
+        <ProtocolMode>0</ProtocolMode>
+        <Ident1>
+        </Ident1>
+        <Ident2>
+        </Ident2>
+        <WatchActivate>False</WatchActivate>
+        <Connect>0</Connect>
+        <SourceCodeUpload>True</SourceCodeUpload>
+        <SourceCodePassword>False</SourceCodePassword>
+        <VariableBackup>True</VariableBackup>
+        <SkipMtxDiffDim>False</SkipMtxDiffDim>
+        <PortList>
+          <Port>
+            <Num>0</Num>
+            <Comment>
+            </Comment>
+            <HW>DI0</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>DIO0_0</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>7</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>DIO0_1</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>8</Pin>
+              </Signal>
+              <Signal>
+                <Num>2</Num>
+                <Name>DIO0_2</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>9</Pin>
+              </Signal>
+              <Signal>
+                <Num>3</Num>
+                <Name>DIO0_3</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>10</Pin>
+              </Signal>
+              <Signal>
+                <Num>4</Num>
+                <Name>DIO0_4</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>11</Pin>
+              </Signal>
+              <Signal>
+                <Num>5</Num>
+                <Name>DIO0_5</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>12</Pin>
+              </Signal>
+              <Signal>
+                <Num>6</Num>
+                <Name>DIO0_6</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>13</Pin>
+              </Signal>
+              <Signal>
+                <Num>7</Num>
+                <Name>DIO0_7</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>14</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+          <Port>
+            <Num>1</Num>
+            <Comment>
+            </Comment>
+            <HW>DI0</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>DIO_AC1_0</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>7</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>DIO_AC1_1</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>8</Pin>
+              </Signal>
+              <Signal>
+                <Num>2</Num>
+                <Name>DIO_AC1_2</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>9</Pin>
+              </Signal>
+              <Signal>
+                <Num>3</Num>
+                <Name>DIO_AC1_3</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>10</Pin>
+              </Signal>
+              <Signal>
+                <Num>4</Num>
+                <Name>DIO_AC1_4</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>11</Pin>
+              </Signal>
+              <Signal>
+                <Num>5</Num>
+                <Name>DIO_AC1_5</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>12</Pin>
+              </Signal>
+              <Signal>
+                <Num>6</Num>
+                <Name>DIO_AC1_6</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>13</Pin>
+              </Signal>
+              <Signal>
+                <Num>7</Num>
+                <Name>DIO_AC1_7</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>14</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+          <Port>
+            <Num>2</Num>
+            <Comment>
+            </Comment>
+            <HW>AI0</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>DAI02_0</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>25</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>DAI02_1</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>26</Pin>
+              </Signal>
+              <Signal>
+                <Num>2</Num>
+                <Name>DAI02_2</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>27</Pin>
+              </Signal>
+              <Signal>
+                <Num>3</Num>
+                <Name>DAI02_3</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>28</Pin>
+              </Signal>
+              <Signal>
+                <Num>4</Num>
+                <Name>DAI02_4</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>29</Pin>
+              </Signal>
+              <Signal>
+                <Num>5</Num>
+                <Name>DAI02_5</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>30</Pin>
+              </Signal>
+              <Signal>
+                <Num>6</Num>
+                <Name>DAI02_6</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>31</Pin>
+              </Signal>
+              <Signal>
+                <Num>7</Num>
+                <Name>DAI02_7</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>32</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+          <Port>
+            <Num>3</Num>
+            <Comment>
+            </Comment>
+            <HW>AI0</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>DAI0_AC3_0</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>25</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>DAI0_AC3_1</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>26</Pin>
+              </Signal>
+              <Signal>
+                <Num>2</Num>
+                <Name>DAI0_AC3_2</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>27</Pin>
+              </Signal>
+              <Signal>
+                <Num>3</Num>
+                <Name>DAI0_AC3_3</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>28</Pin>
+              </Signal>
+              <Signal>
+                <Num>4</Num>
+                <Name>DAI0_AC3_4</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>29</Pin>
+              </Signal>
+              <Signal>
+                <Num>5</Num>
+                <Name>DAI0_AC3_5</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>30</Pin>
+              </Signal>
+              <Signal>
+                <Num>6</Num>
+                <Name>DAI0_AC3_6</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>31</Pin>
+              </Signal>
+              <Signal>
+                <Num>7</Num>
+                <Name>DAI0_AC3_7</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>32</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+          <Port>
+            <Num>4</Num>
+            <Comment>
+            </Comment>
+            <HW>DO0</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>DO00_0</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>16</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>DO00_1</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>17</Pin>
+              </Signal>
+              <Signal>
+                <Num>2</Num>
+                <Name>DO00_2</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>18</Pin>
+              </Signal>
+              <Signal>
+                <Num>3</Num>
+                <Name>DO00_3</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>19</Pin>
+              </Signal>
+              <Signal>
+                <Num>4</Num>
+                <Name>DO00_4</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>20</Pin>
+              </Signal>
+              <Signal>
+                <Num>5</Num>
+                <Name>DO00_5</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>21</Pin>
+              </Signal>
+              <Signal>
+                <Num>6</Num>
+                <Name>DO00_6</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>22</Pin>
+              </Signal>
+              <Signal>
+                <Num>7</Num>
+                <Name>DO00_7</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>23</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+          <Port>
+            <Num>5</Num>
+            <Comment>
+            </Comment>
+            <HW>AI0</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>AI00_0</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>25</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>AI00_1</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>26</Pin>
+              </Signal>
+              <Signal>
+                <Num>2</Num>
+                <Name>AI00_2</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>27</Pin>
+              </Signal>
+              <Signal>
+                <Num>3</Num>
+                <Name>AI00_3</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>28</Pin>
+              </Signal>
+              <Signal>
+                <Num>4</Num>
+                <Name>AI00_4</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>29</Pin>
+              </Signal>
+              <Signal>
+                <Num>5</Num>
+                <Name>AI00_5</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>30</Pin>
+              </Signal>
+              <Signal>
+                <Num>6</Num>
+                <Name>AI00_6</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>31</Pin>
+              </Signal>
+              <Signal>
+                <Num>7</Num>
+                <Name>AI00_7</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>32</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+          <Port>
+            <Num>6</Num>
+            <Comment>
+            </Comment>
+            <HW>AI0</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>Ni10001_0</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>25</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>Ni10001_1</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>26</Pin>
+              </Signal>
+              <Signal>
+                <Num>2</Num>
+                <Name>Ni10001_2</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>27</Pin>
+              </Signal>
+              <Signal>
+                <Num>3</Num>
+                <Name>Ni10001_3</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>28</Pin>
+              </Signal>
+              <Signal>
+                <Num>4</Num>
+                <Name>Ni10001_4</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>29</Pin>
+              </Signal>
+              <Signal>
+                <Num>5</Num>
+                <Name>Ni10001_5</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>30</Pin>
+              </Signal>
+              <Signal>
+                <Num>6</Num>
+                <Name>Ni10001_6</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>31</Pin>
+              </Signal>
+              <Signal>
+                <Num>7</Num>
+                <Name>Ni10001_7</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>32</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+          <Port>
+            <Num>7</Num>
+            <Comment>
+            </Comment>
+            <HW>PWR</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>Vpwr</Name>
+                <Comment>Napájecí napětí 0..55 V</Comment>
+                <HW>
+                </HW>
+                <Pin>-1</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>Vibatt</Name>
+                <Comment>Napětí zálohovací baterie 0..5 V</Comment>
+                <HW>
+                </HW>
+                <Pin>-1</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+          <Port>
+            <Num>8</Num>
+            <Comment>
+            </Comment>
+            <HW>AO0</HW>
+            <SignalList>
+              <Signal>
+                <Num>0</Num>
+                <Name>AO00_0</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>2</Pin>
+              </Signal>
+              <Signal>
+                <Num>1</Num>
+                <Name>AO00_1</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>3</Pin>
+              </Signal>
+              <Signal>
+                <Num>2</Num>
+                <Name>AO00_2</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>4</Pin>
+              </Signal>
+              <Signal>
+                <Num>3</Num>
+                <Name>AO00_3</Name>
+                <Comment>NC</Comment>
+                <HW>
+                </HW>
+                <Pin>5</Pin>
+              </Signal>
+            </SignalList>
+          </Port>
+        </PortList>
+        <NetOptions />
+      </HwDescriptor>
+      <SettingsRS>
+        <GenWatchInfo>1</GenWatchInfo>
+        <IsGenWatchFBParams>True</IsGenWatchFBParams>
+      </SettingsRS>
+    </Data>
+    <DataManager>
+      <Investigator Name="LoadSave" Class="Amit.Psp.PspTools.ToolInvestigatorMain">
+        <Nastaveni>
+          <NoneArrays>False</NoneArrays>
+          <ArrayFilter>False</ArrayFilter>
+          <ArrayCol>10</ArrayCol>
+          <ArrayRow>10</ArrayRow>
+          <NoPanel>False</NoPanel>
+          <LinkPath>
+          </LinkPath>
+          <CompareWID>Name</CompareWID>
+          <CompareSDf>False</CompareSDf>
+          <CompareUni>False</CompareUni>
+          <CompareArray>False</CompareArray>
+          <ViewWID>False</ViewWID>
+          <ViewNull>False</ViewNull>
+          <ViewHex>False</ViewHex>
+          <ViewRefresh>True</ViewRefresh>
+          <ActualStore>False</ActualStore>
+          <ActualProject>False</ActualProject>
+          <ActualWID>False</ActualWID>
+          <SkipMtxDiffDim>False</SkipMtxDiffDim>
+        </Nastaveni>
+        <SortingNum>0</SortingNum>
+        <SortingDesc>False</SortingDesc>
+        <Soubory />
+      </Investigator>
+    </DataManager>
+    <ArchiveManager>
+      <Archivist Class="Amit.Psp.PspTools.ToolArchiveMain">
+        <Nastaveni>
+          <RefreshS>60</RefreshS>
+          <InterTimeMs>50</InterTimeMs>
+          <SaveSamples>10</SaveSamples>
+          <RefreshWindows>True</RefreshWindows>
+          <DenikTextyAuto>10</DenikTextyAuto>
+          <ViewDenikCas>True</ViewDenikCas>
+          <ViewDenikHistory>True</ViewDenikHistory>
+          <ViewDenikPomVal>False</ViewDenikPomVal>
+          <ViewArchivCas>True</ViewArchivCas>
+          <ViewArchivHistory>False</ViewArchivHistory>
+          <ViewDenikView>ExplOut</ViewDenikView>
+          <ViewDenikSystem>True</ViewDenikSystem>
+          <ViewArchivView>Normal</ViewArchivView>
+          <ExportPath>
+          </ExportPath>
+          <ExportType>Text</ExportType>
+          <QuickLastRows>300</QuickLastRows>
+        </Nastaveni>
+        <SortingNum>0</SortingNum>
+        <SortingDesc>False</SortingDesc>
+        <RunDisabled>False</RunDisabled>
+        <Archives />
+      </Archivist>
+    </ArchiveManager>
+    <NastaveniKomunikace>
+      <AdresaPC>31</AdresaPC>
+      <AdresaStanice>4</AdresaStanice>
+      <TypKomunikace>cmCom</TypKomunikace>
+      <COM>
+        <ComComPort>0</ComComPort>
+        <ComSpeed>57600</ComSpeed>
+      </COM>
+      <UDP>
+        <UdpAddr>
+          <Byte0>1</Byte0>
+          <Byte1>168</Byte1>
+          <Byte2>168</Byte2>
+          <Byte3>192</Byte3>
+        </UdpAddr>
+        <UdpPort>59</UdpPort>
+        <UdpTimeOut>3000</UdpTimeOut>
+        <UdpPass>0</UdpPass>
+        <EthProtocol>UDP</EthProtocol>
+        <UdpMyPort>59</UdpMyPort>
+        <UdpRedirect>False</UdpRedirect>
+        <UdpSubAddr>
+          <Byte0>0</Byte0>
+          <Byte1>0</Byte1>
+          <Byte2>0</Byte2>
+          <Byte3>0</Byte3>
+        </UdpSubAddr>
+        <UdpSubPort>59</UdpSubPort>
+        <UdpMinDelay>0</UdpMinDelay>
+      </UDP>
+      <Modem>
+        <MdmPass>0</MdmPass>
+        <MdmMyPass>0</MdmMyPass>
+        <MdmComPort>0</MdmComPort>
+        <MdmSpeed>9600</MdmSpeed>
+        <MdmPriority>0</MdmPriority>
+        <MdmSPrior>B</MdmSPrior>
+        <MdmMezPochyb>10</MdmMezPochyb>
+        <MdmInitStr>
+        </MdmInitStr>
+        <MdmCallPrefix>
+        </MdmCallPrefix>
+        <MdmHangStr>
+        </MdmHangStr>
+        <MdmGPS_PIN>
+        </MdmGPS_PIN>
+        <MdmBlockDelay>30</MdmBlockDelay>
+        <MdmTelNum>
+        </MdmTelNum>
+        <MdmNoFail>1</MdmNoFail>
+      </Modem>
+      <Dokopo>
+        <DkpDKP>1</DkpDKP>
+        <DkpSpeed>9600</DkpSpeed>
+      </Dokopo>
+      <Virtual />
+      <Service>
+        <SrvComPort>0</SrvComPort>
+        <SrvTimeOut>1000</SrvTimeOut>
+        <SrvMyPort>59</SrvMyPort>
+        <SrvMyPass>0</SrvMyPass>
+      </Service>
+      <GPRS>
+        <GprsComPort>0</GprsComPort>
+        <GprsDuplFull>False</GprsDuplFull>
+        <GprsModemAddr>
+          <Byte0>0</Byte0>
+          <Byte1>0</Byte1>
+          <Byte2>0</Byte2>
+          <Byte3>0</Byte3>
+        </GprsModemAddr>
+        <GprsModemPort>59</GprsModemPort>
+        <GprsAddr>
+          <Byte0>0</Byte0>
+          <Byte1>0</Byte1>
+          <Byte2>0</Byte2>
+          <Byte3>0</Byte3>
+        </GprsAddr>
+        <GprsPort>59</GprsPort>
+        <GprsMyPass>0</GprsMyPass>
+        <GprsTimeOut>5000</GprsTimeOut>
+      </GPRS>
+    </NastaveniKomunikace>
+  </Project>
+  <Project Class="Amit.Lcw.LcwIde">
+    <Data Class="Amit.Lcw.Shared.LcwProject">
+      <Platform>Amini2DN3</Platform>
+      <LastRevised>0</LastRevised>
+      <SerialPort>0</SerialPort>
+      <BaudRate>9600</BaudRate>
+      <FullDuplex>0</FullDuplex>
+      <ScrollBarWidth>7</ScrollBarWidth>
+      <StartupScreen>
+      </StartupScreen>
+      <ColdResetStartupScreen>
+      </ColdResetStartupScreen>
+      <Orientation>0</Orientation>
+      <InitialZoom>3</InitialZoom>
+      <FocusStyle>0</FocusStyle>
+      <BlinkInEdit>True</BlinkInEdit>
+      <FontDefault>Tridet 7</FontDefault>
+      <GlobalScreen>
+        <Screen Name="Global" Class="Amit.Lcw.Shared.LcwGlobalScreen">
+          <DisplayType>2</DisplayType>
+          <Refresh>1000</Refresh>
+          <Comment>
+          </Comment>
+          <BackColor>buttonshadow</BackColor>
+          <ForeColor>buttontext</ForeColor>
+          <Zoom>3</Zoom>
+          <GridSize>0,0</GridSize>
+          <DrawGrid>True</DrawGrid>
+          <OnOpen>
+          </OnOpen>
+          <OnClose>
+          </OnClose>
+          <OnRefresh>
+          </OnRefresh>
+          <Elements />
+          <Script><![CDATA[]]></Script>
+          <BackgroundImage />
+        </Screen>
+      </GlobalScreen>
+      <ScreenList>
+        <Screen Name="Screen1" Class="Amit.Lcw.Shared.LcwScreen">
+          <DisplayType>2</DisplayType>
+          <Refresh>1000</Refresh>
+          <Comment>
+          </Comment>
+          <BackColor>#E6EAAA</BackColor>
+          <ForeColor>#1F375C</ForeColor>
+          <Zoom>3</Zoom>
+          <GridSize>0,0</GridSize>
+          <DrawGrid>True</DrawGrid>
+          <OnOpen>
+          </OnOpen>
+          <OnClose>
+          </OnClose>
+          <OnRefresh>
+          </OnRefresh>
+          <Elements />
+          <Script><![CDATA[event Screen1_OnOpen()
+	Screen1.FocusFirstControl();
+end;]]></Script>
+          <BackgroundImage />
+        </Screen>
+      </ScreenList>
+    </Data>
+  </Project>
+</DetStation>

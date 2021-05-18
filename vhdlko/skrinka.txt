@@ -1,0 +1,144 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity srinka_brainstorm is
+    Port ( clk : in  STD_LOGIC;
+           rst : in  STD_LOGIC;
+           mince : in  STD_LOGIC_VECTOR (2 downto 0);
+           stav : inout  STD_LOGIC_VECTOR (2 downto 0);
+           vystup : out  STD_LOGIC_VECTOR (1 downto 0));
+end srinka_brainstorm;
+
+	architecture Behavioral of srinka_brainstorm is
+	
+	signal state, next_state : STD_LOGIC_VECTOR (2 downto 0);
+	constant s0 : STD_LOGIC_VECTOR (2 downto 0):= "000";
+	constant s1 : STD_LOGIC_VECTOR (2 downto 0):= "001";
+	constant s2 : STD_LOGIC_VECTOR (2 downto 0):= "010";
+	constant s3 : STD_LOGIC_VECTOR (2 downto 0):= "011";
+	constant s4 : STD_LOGIC_VECTOR (2 downto 0):= "100";
+	
+																		
+begin
+ 
+   SYNC_PROC: process (clk)
+   begin
+      
+         if (rst = '1') then
+            state <= s0;
+         elsif rising_edge (clk) then
+            state <= next_state;    
+         end if;        
+   end process;
+ 
+ 
+   OUTPUT_DECODE: process (state, mince)
+   begin
+     case (state) is 
+      when s0 =>
+         if(mince = "000") then vystup <= "00";
+		elsif(mince = "001") then vystup <= "00";
+		elsif(mince = "010") then vystup <= "00";
+		elsif(mince = "100") then vystup <= "10";
+		else vystup <= "00";
+		end if;
+		
+      when s1 =>
+         if(mince = "000") then vystup <= "00";
+		elsif(mince = "001") then vystup <= "00";
+		elsif(mince = "010") then vystup <= "00";
+		elsif(mince = "100") then vystup <= "10";
+		else vystup <= "00";
+		end if;
+		
+      when s2 =>
+         if(mince = "000") then vystup <= "00";
+		elsif(mince = "001") then vystup <= "00";
+		elsif(mince = "010") then vystup <= "00";
+		elsif(mince = "100") then vystup <= "10";
+		else vystup <= "00";
+		end if;
+		
+		when s3 =>
+         if(mince = "000") then vystup <= "00";
+		elsif(mince = "001") then vystup <= "00";
+		elsif(mince = "010") then vystup <= "10";
+		elsif(mince = "100") then vystup <= "10";
+		else vystup <= "00";
+		end if;
+		
+		when s4 =>
+         if(mince = "000") then vystup <= "00";
+		elsif(mince = "001") then vystup <= "10";
+		elsif(mince = "010") then vystup <= "11";
+		elsif(mince = "100") then vystup <= "10";
+		else vystup <= "00";
+		end if;
+		
+		
+      when others => NULL;
+   end case;
+																																
+   
+   end process;
+ 
+   NEXT_STATE_DECODE: process (state, mince)
+   begin
+      
+      case (state) is
+         when s0 =>
+            if(mince = "000") then next_state <= s0; 
+			elsif(mince = "001") then next_state <= s1; 
+			elsif(mince = "010") then next_state <= s2; 
+			elsif(mince = "100") then next_state <= s0; 
+			else next_state <= s0; 
+            end if;
+				 
+         when s1 =>
+            if(mince = "000") then next_state <= s1; 
+			elsif(mince = "001") then next_state <= s2; 
+			elsif(mince = "010") then next_state <= s3;
+			elsif(mince = "100") then next_state <= s0;
+			else next_state <= s1;
+            end if;
+				
+         when s2 =>
+            if(mince = "000") then next_state <= s2; 
+			elsif(mince = "001") then next_state <= s3; 
+			elsif(mince = "010") then next_state <= s4; 
+			elsif(mince = "100") then next_state <= s0; 
+			else next_state <= s2;
+            end if;
+				
+			when s3 =>
+            if(mince = "000") then next_state <= s3;
+			elsif(mince = "001") then next_state <= s4;
+			elsif(mince = "010") then next_state <= s0;
+			elsif(mince = "100") then next_state <= s0; 
+			else next_state <= s3;
+            end if;	
+				
+			when s4 =>
+            if(mince = "000") then next_state <= s4;
+			elsif(mince = "001") then next_state <= s0; 
+			elsif(mince = "010") then next_state <= s0; 
+			elsif(mince = "100") then next_state <= s0; 
+			else next_state <= s4;
+            end if;	
+				
+         when others => NULL;
+      end case;    
+		stav <= state;
+   end process;
+
+				
+end Behavioral;

@@ -1,0 +1,5 @@
+If pEvent.NextState = 1 Then
+ pMe.Pm("../vypzap").value = 1
+ Else 
+ pMe.Pm("../vypzap").value = 0
+ end if

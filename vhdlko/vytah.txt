@@ -1,0 +1,121 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity vytah_brainstorm is
+    Port ( clk : in  STD_LOGIC;
+           rst : in  STD_LOGIC;
+           kam : in  STD_LOGIC_VECTOR (3 downto 0);
+           patro : inout  STD_LOGIC_VECTOR (1 downto 0);
+           vyst : out  STD_LOGIC_VECTOR (5 downto 0));
+end vytah_brainstorm;
+
+	architecture Behavioral of vytah_brainstorm is
+	 signal state, next_state : STD_LOGIC_VECTOR (1 downto 0); 
+	 constant s0 : STD_LOGIC_VECTOR (1 downto 0):= "00";
+	 constant s1 : STD_LOGIC_VECTOR (1 downto 0):= "01";
+	 constant s2 : STD_LOGIC_VECTOR (1 downto 0):= "10";
+	 constant s3 : STD_LOGIC_VECTOR (1 downto 0):= "11";
+	 
+	 
+begin
+   
+ 
+   SYNC_PROC: process (clk)
+   begin
+     
+         if (rst = '1') then
+            state <= s0;
+         elsif rising_edge (clk) then
+            state <= next_state;
+         end if;        
+   end process;
+ 
+ 
+   OUTPUT_DECODE: process (state, kam)
+   begin
+
+         case (state) is 
+      when s0 =>
+			  if(kam = "0001") then vyst <= "111000";
+		  elsif(kam = "0010") then vyst <= "001010";
+		  elsif(kam = "0100") then vyst <= "010010";
+		  elsif(kam = "1000") then vyst <= "100010";
+		  else vyst <= "000000";
+		  end if;
+		  
+      when s1 =>
+           if(kam = "0001") then vyst <= "001001";
+		  elsif(kam = "0010") then vyst <= "111000";
+		  elsif(kam = "0100") then vyst <= "001010";
+		  elsif(kam = "1000") then vyst <= "010010";
+		  else vyst <= "000000";
+		  end if;
+      when s2 =>
+			  if(kam = "0001") then vyst <= "010001";
+		  elsif(kam = "0010") then vyst <= "001001";
+		  elsif(kam = "0100") then vyst <= "111000";
+		  elsif(kam = "1000") then vyst <= "001010";
+		  else vyst <= "000000";
+        end if;
+      when s3 =>
+			  if(kam = "0001") then vyst <= "100001";
+		  elsif(kam = "0010") then vyst <= "010001";
+		  elsif(kam = "0100") then vyst <= "001001";
+		  elsif(kam = "1000") then vyst <= "111000";
+		  else vyst <= "000000";
+		  end if;
+      when others => NULL;
+         
+   end case;
+				
+   end process;
+ 
+   NEXT_STATE_DECODE: process (state, kam)
+   begin
+ 
+      case (state) is
+         when s0 =>
+               if(kam = "0001") then next_state <= s0; patro <= "00";
+				elsif(kam = "0010") then next_state <= s1; patro <= "01";
+				elsif(kam = "0100") then next_state <= s2; patro <= "10";
+				elsif(kam = "1000") then next_state <= s3; patro <= "11";
+				else next_state <= s0;
+            end if;
+				
+         when s1 =>
+               if(kam = "0001") then next_state <= s0; patro <= "00";
+				elsif(kam = "0010") then next_state <= s1; patro <= "01";
+				elsif(kam = "0100") then next_state <= s2; patro <= "10";
+				elsif(kam = "1000") then next_state <= s3; patro <= "11";
+				else next_state <= s1;
+            end if;
+         when s2 =>
+					if(kam = "0001") then next_state <= s0; patro <= "00";
+				elsif(kam = "0010") then next_state <= s1; patro <= "01";
+				elsif(kam = "0100") then next_state <= s2; patro <= "10";
+				elsif(kam = "1000") then next_state <= s3; patro <= "11";
+				else next_state <= s2;
+            end if;
+			when s3 =>
+					if(kam = "0001") then next_state <= s0; patro <= "00";
+				elsif(kam = "0010") then next_state <= s1; patro <= "01";
+				elsif(kam = "0100") then next_state <= s2; patro <= "10";
+				elsif(kam = "1000") then next_state <= s3; patro <= "11";
+				else next_state <= s3;
+				
+            end if;	
+         when others => NULL;
+            patro <= state;
+      end case;      
+   end process;
+
+end Behavioral;

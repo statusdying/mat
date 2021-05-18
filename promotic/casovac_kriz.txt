@@ -1,0 +1,41 @@
+Dim vypzap
+Set vypzap=pMe.Pm("../vypzap")
+
+Dim stav
+Set stav=pMe.Pm("../stav")
+
+Dim stav2
+Set stav2=pMe.Pm("../stav2")
+
+If vypzap.value = 0 Then              
+
+ If stav2.value = 1 Then                  
+  
+    If stav.value >= 28 Then     
+      stav.value = 1
+    Else
+      stav.value = stav.value + 1
+    End if
+    
+  Else
+    
+    
+    If stav.value <=28 Then           
+        stav.value = 29
+     
+     
+    else if stav.value = 29 Then
+     stav.value = stav.value + 1
+    
+    
+    else if stav.value = 30 Then
+    stav.value = stav.value - 1
+    
+    End if
+    End if  
+    End If
+           
+  End if
+  
+Else stav.value = 29
+End If
